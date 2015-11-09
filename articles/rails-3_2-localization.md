@@ -1,7 +1,9 @@
 [date: 2013-02-16]
 [summary: Localization of nested attributes in Rails 3.2]
-[tag: localization] 
-[tag: rails] 
+[tag: localization]
+[tag: rails]
+
+# Localization of nested attributes in Rails 3.2
 
 When you refer to one shared model from a handful of other models, sometimes
 you need to give the shared model's attributes different user-facing names
@@ -15,7 +17,7 @@ If you can look past a contrived example, let's say you've got models for
 `Organization` and `Customer`, and each of them refer to a `ContactInfo`.
 The unnested way to use Rails i18n would be something like this:
 
-```yaml config/locales/en.yml
+```yaml 
 en:
   activerecord:
     attributes:
@@ -32,7 +34,7 @@ has a slight twist - rather than nesting `contact_info` inside of
 `organization` or naming they key `organization.contact_info`
 the nested attribute should be separated with a `/` character.
 
-```yaml config/locales/en.yml
+```yaml 
 en:
   activerecord:
     attributes:
